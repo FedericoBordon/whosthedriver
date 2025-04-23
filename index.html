@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+  
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="no-referrer">
+  <title>Who's the Driver? | Juego de Adivinanzas de F1</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Who's the Driver?</title>
+  <meta name="description" content="Juego de adivinanzas de Fórmula 1 donde deberás adivinar el piloto a través de pistas sobre su nacionalidad, equipo, debut y casco. ¡Pon a prueba tus conocimientos de F1!" />
+  <meta name="keywords" content="F1, Formula 1, juego F1, pilotos F1, adivinanzas F1, Hamilton, Verstappen, Alonso, juego de pilotos" />
+  <meta name="author" content="Who's the Driver?" />
+  <meta name="robots" content="index, follow" />
+
+
+  <link rel="icon" type="img/png" href="img/favicon.png" />
   <link rel="stylesheet" href="main.css" />
 </head>
 <body>
+
+  <div id="instructions-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>¿Cómo jugar Who's the Driver?</h2>
+      <div class="instructions">
+        <p>¡Adivina el piloto de F1 en 6 intentos!</p>
+        <ul>
+          <li>Cada intento debe ser el apellido de un piloto válido</li>
+          <li>Las letras en verde están en la posición correcta</li>
+          <li>Las letras en amarillo están en el nombre pero en otra posición</li>
+          <li>Las letras en gris no están en el nombre</li>
+        </ul>
+        <p>Te daremos pistas sobre:</p>
+        <ul>
+          <li>Nacionalidad del piloto</li>
+          <li>Equipo actual</li>
+          <li>Año de debut en F1</li>
+          <li>Diseño del casco</li>
+        </ul>
+      </div>
+      <button id="start-game">¡Empezar a jugar!</button>
+    </div>
+  </div>
   <div class="game-container">
     <h1>Who's the Driver?</h1>
     <div class="game-layout">
